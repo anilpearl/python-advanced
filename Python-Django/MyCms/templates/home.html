@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{%block content%}
+    <img src="{% static "img/a.jpg" %}" alt="My image"/>
+    <div class="great">{{name}}</div>
+    <h1>This is a nice stuff : {{request.user}}</h1>
+    {% for student in students %}
+    <p>{{student}}</p>
+    {% endfor %}
+    {{info}}
+{%endblock%}
